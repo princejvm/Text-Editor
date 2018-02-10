@@ -14,13 +14,14 @@ public class FileBrowser extends JPanel implements ActionListener{
     JLabel label = new JLabel("File List: ");
     JButton newFile = new JButton("New File");
     JButton open = new JButton("Open");
+    JButton logOut = new JButton("Log Out");
     JTextField newFileTF = new JTextField(10);
     ButtonGroup bg;
     File directory;
     FileBrowser(String path){
     	directory = new File(path);
     	directory.mkdir();
-    	JPanel fileList = new JPanel(new GridLayout(directory.listFiles().length+3,1));
+    	JPanel fileList = new JPanel(new GridLayout(directory.listFiles().length+4,1));
     	fileList.add(label);
     	bg = new ButtonGroup();
     	for(File file : directory.listFiles()) {
@@ -29,14 +30,18 @@ public class FileBrowser extends JPanel implements ActionListener{
     		bg.add(name);
     		fileList.add(name);
     	}
+    	JPanel options = new JPanel(new GridLayout(3,1));
     	open.addActionListener(this);
     	newFile.addActionListener(this);
-    	JPanel newF = new JPanel();
+    	JPanel newF = new JPanel(new GridLayout(1,2));
     	newF.add(newFileTF);
     	newF.add(newFile);
-    	fileList.add(newF);
-    	fileList.add(open);
+    	options.add(newF);
+    	options.add(open);
+    	logOut.addActionListener(this);
+    	options.add(logOut);
     	add(fileList);
+    	add(options);
     }
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -52,6 +57,11 @@ public class FileBrowser extends JPanel implements ActionListener{
 				login.add(new Editor(file),"editor");
 				login.cl.show(login, "editor");
 			}
+		}
+		if(e.getSource() == logOut) {
+			login.userTF.setText("");
+			login.passTF.setText("");
+			login.cl.show(login,"login");
 		}
 	}
 }

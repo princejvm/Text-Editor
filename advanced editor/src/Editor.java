@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.StringTokenizer;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -51,7 +52,9 @@ public class Editor extends JPanel implements ActionListener{
 			out.write(text.getText());
 			out.close();
 			if(e.getSource() == savec) {
+				StringTokenizer st = new StringTokenizer(file.getPath());
 				Login login = (Login) getParent();
+				login.add(new FileBrowser(st.nextToken("\\")),"fb");
 				login.cl.show(login, "fb");
 			}
 		} catch (IOException e1) {
