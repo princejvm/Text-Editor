@@ -54,5 +54,4 @@ public class FileBrowser extends JPanel implements ActionListener{
 			}
 		}
 	}
-
 }
