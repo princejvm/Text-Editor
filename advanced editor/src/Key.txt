@@ -1,0 +1,19 @@
+  * CardLayout-->only one component is visible at a time.It treats each component as a card. card.next(c); c-->container
+  * panel is also a specific container
+  
+  * Java BufferedReader class is used to read the text from a character-based input stream. It can be used to read data line by line by readLine() method.
+	It makes the performance fast. It inherits Reader class.
+				
+  * The java.util.StringTokenizer class allows you to break a string into tokens. It is simple way to break string.						
+						 
+  * This MessageDigest class provides applications the functionality of a message digest algorithm, such as SHA-1 or SHA-256. SHA-256 algorithm generates an almost-unique, 
+    fixed size 256-bit (32-byte) hash.Message digests are secure one-way hash functions that take arbitrary-sized data and output a fixed-length hash value.
+
+  *  sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+     & 0xFF performs a binary AND, causing the returning value to be between 0 and 255 (which a byte always is anyway)
+     + 0x100 adds 256 to the result to ensure the result is always 3 digits
+     Integer.toString(src, 16) converts the integer to a string with helix 16 (hexadecimal)
+     Finally .substring(1) strips the first character (the 1 from step 2)
+
+  * 					 
+					 
