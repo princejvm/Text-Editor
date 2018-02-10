@@ -62,6 +62,7 @@ public class Register extends JPanel implements ActionListener{
 							userTF.setText("");
 							passTF.setText("");
 							passTFC.setText("");
+							input.close();
 							return;
 						}
 						line = input.readLine();
