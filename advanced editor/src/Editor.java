@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 public class Editor extends JPanel implements ActionListener{
+	private static final long serialVersionUID = 1L;
 	File file;
 	JButton save = new JButton("Save");
 	JButton savec = new JButton("Save and Close");

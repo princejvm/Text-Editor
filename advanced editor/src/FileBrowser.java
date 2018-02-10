@@ -11,7 +11,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 public class FileBrowser extends JPanel implements ActionListener{
-    JLabel label = new JLabel("File List: ");
+	private static final long serialVersionUID = 1L;
+	JLabel label = new JLabel("File List: ");
     JButton newFile = new JButton("New File");
     JButton open = new JButton("Open");
     JButton logOut = new JButton("Log Out");

@@ -19,7 +19,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class Login extends JPanel implements ActionListener{
-    JLabel userL = new JLabel("Username: ");
+	private static final long serialVersionUID = 1L;
+	JLabel userL = new JLabel("Username: ");
     JTextField userTF = new JTextField();
     JLabel passL = new JLabel("Password: ");
     JPasswordField passTF = new JPasswordField();

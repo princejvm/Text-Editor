@@ -19,6 +19,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class Register extends JPanel implements ActionListener{
+	private static final long serialVersionUID = 1L;
 	JLabel userL = new JLabel("Choose a username: ");
 	JTextField userTF = new JTextField();
 	JLabel passL = new JLabel("Enter Password: ");
